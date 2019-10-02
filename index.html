@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GAME SNAKE PYTHON</title>
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/keyframes.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <script src="js/funcao.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon.png">
+
+</head>
+
+<body class="telaLogin">
+    <audio id="sonsButton">
+        <source src="sound/button.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sonsText">
+        <source src="sound/textArea.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="sonsStart">
+        <source src="sound/start.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="boxSnake1 row">
+        <div class="col-dg-12, col-dm-12">
+            <img id="olhosPiscando" src="image/logo.png" alt="GAME SNAKE PYTHON"
+                onmouseover="imgChange('image/logof.png'); " onmouseout="imgChange('image/logo.png')">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-dg-12, col-dm-12">
+            <div class="modal-container">
+                <button onclick="document.getElementById('modalSnake1').style.display='block'"
+                    class="modal-button efeitoFontePiscando" onfocus="playAudio('sonsStart')"
+                    onblur="pauseAudio('sonsStart')">START</button>
+
+                <div id="modalSnake1" class="modal">
+                    <div class="modal-animate-top displayLogin ">
+                        <header>
+                            <span onclick="document.getElementById('modalSnake1').style.display='none'"
+                                class="modal-button modal-display-topright">&times;</span>
+                        </header>
+                        <form>
+                            <div class="row">
+                                <div class="col-dg-12 col-dm-12">
+                                    <h1>GAME SNAKE PYTHON </h1>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-dg-4 col-dm-4">
+                                    <label for="txtNome">JOGADOR</label>
+                                </div>
+                                <div class="col-dg-8 col-dm-8">
+                                    <input type="text" name="nome" id="txtNome" maxlength="40"
+                                        onfocus="playAudio('sonsText')" onblur="pauseAudio('sonsText')">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-dg-4 col-dm-4">
+                                    <label for="txtSenha">SENHA</label>
+                                </div>
+                                <div class="col-dg-8 col-dm-8">
+                                    <input type="password" name="senha" id="txtSenha" maxlength="20"
+                                        onfocus="playAudio('sonsText')" onblur="pauseAudio('sonsText')">
+                                </div>
+                            </div>
+                           <br>
+                           <br>
+                            <div class="row">
+                                <div class="col-dg-6 col-dm-6">
+                                    <input type="button" value="Entrar" onclick="validar()"
+                                        onfocus="playAudio('sonsButton')" onblur="pauseAudio('sonsButton')">
+                                </div>
+                                <div class="col-dg-6 col-dm-6">
+                                    <input type="button" value="Cadastrar" onfocus="playAudio('sonsButton')"
+                                        onblur="pauseAudio('sonsButton')">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
