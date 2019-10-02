@@ -33,11 +33,12 @@
 .modal-button:hover {
     color: rgb(47, 255, 28);
     text-shadow: 0px 0px 15px rgba(122, 224, 136, 0.76);
-    font-size: 40px;
+    font-size: 44px;
     animation:fontPiscando linear;
     font-weight: bolder;
     -webkit-text-stroke-width: 0.4px;
     -webkit-text-stroke-color: rgb(12, 54, 4);
+    margin-top: -4px;
 }
 
 /*
