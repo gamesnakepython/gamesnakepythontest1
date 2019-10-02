@@ -56,8 +56,7 @@
                                     <label for="txtNome">JOGADOR</label>
                                 </div>
                                 <div class="col-dg-8 col-dm-8">
-                                    <input type="text" name="nome" id="txtNome" maxlength="40"
-                                        onfocus="playAudio('sonsText')" onblur="pauseAudio('sonsText')">
+                                    <input type="text" name="nome" id="txtNome" maxlength="40" required="required" onfocus="playAudio('sonsText')" onblur="pauseAudio('sonsText')">
                                 </div>
                             </div>
                             <div class="row">
@@ -65,20 +64,7 @@
                                     <label for="txtSenha">SENHA</label>
                                 </div>
                                 <div class="col-dg-8 col-dm-8">
-                                    <input type="password" name="senha" id="txtSenha" maxlength="20"
-                                        onfocus="playAudio('sonsText')" onblur="pauseAudio('sonsText')">
-                                </div>
-                            </div>
-                           <br>
-                           <br>
-                            <div class="row">
-                                <div class="col-dg-6 col-dm-6">
-                                    <input type="button" value="Entrar" onclick="validar()"
-                                        onfocus="playAudio('sonsButton')" onblur="pauseAudio('sonsButton')">
-                                </div>
-                                <div class="col-dg-6 col-dm-6">
-                                    <input type="button" value="Cadastrar" onfocus="playAudio('sonsButton')"
-                                        onblur="pauseAudio('sonsButton')">
+                                    <input type="password" name="senha" id="txtSenha" maxlength="20" required="required" onfocus="playAudio('sonsText')" onblur="pauseAudio('sonsText')">
                                 </div>
                             </div>
                         </form>
