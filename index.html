@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="telaLogin">
+<body class="telaLogin" onload="intervaloPiscarOlhos()">
     <audio id="sonsButton">
         <source src="sound/button.wav" type="audio/wav">
     </audio>
@@ -26,8 +26,12 @@
 
     <div class="boxSnake1 row">
         <div class="col-dg-12, col-dm-12">
-            <img id="olhosPiscando" src="image/logo.png" alt="GAME SNAKE PYTHON"
-                onmouseover="imgChange('image/logof.png'); " onmouseout="imgChange('image/logo.png')">
+
+            <img id="olhosPiscando" src="image/logo.png" alt="GAME SNAKE PYTHON" onmouseover="piscarOlhos()"
+                onmouseout="paraOlhos()">
+            <!--
+            <img id="olhosPiscando" src="image/logo.png" alt="GAME SNAKE PYTHON" onmousemove="imgChange('image/logo.png');" onmouseover="pauseAudio('sonsStart');" onmouseout="piscarSozinho('image/logof.png')">
+            -->
         </div>
     </div>
     <div class="row">
@@ -85,6 +89,7 @@
             </div>
         </div>
     </div>
+
 
 
 </body>
