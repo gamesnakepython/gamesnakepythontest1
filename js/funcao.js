@@ -1,3 +1,8 @@
+function upTelaCadastro(){
+    document.getElementById('modalSnakeCadastro').style.display = 'block';
+    document.getElementById('modalSnake1').style.display = 'none';
+}
+
 function pararOlhos(logo){
     clearTimeout(olhos);
     document.getElementById('olhosPiscando').src = ('image/logo.png');
