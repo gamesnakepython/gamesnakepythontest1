@@ -214,4 +214,5 @@ input[type="button"]:active,
     top: 5px;
     box-shadow: none;
     transition: 0.01s;
+    outline:none;
 }
