@@ -1,8 +1,3 @@
-function upTelaCadastro(){
-    document.getElementById('modalSnakeCadastro').style.display = 'block';
-    document.getElementById('modalSnake1').style.display = 'none';
-}
-
 function pararOlhos(logo){
     clearTimeout(olhos);
     document.getElementById('olhosPiscando').src = ('image/logo.png');
@@ -25,17 +20,4 @@ function playAudio(audio) {
 function pauseAudio(audio) {
     document.getElementById(audio).pause();
     document.getElementById(audio).currentTime = 0;
-}
-
-function validar() {
-    var nome = document.getElementById("txtNome").value.trim();
-    var senha = document.getElementById("txtSenha").value.trim();
-
-    if (nome == '') {
-        alert("Usuario Invalido")
-        document.getElementById("txtNome").focus();
-    } else if (senha == '') {
-        alert("Senha Incorreta")
-        document.getElementById("txtSenha").focus();
-    }
 }

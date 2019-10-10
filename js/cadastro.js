@@ -2,9 +2,9 @@ let tabela = [];
 
 function cadastroFim(){
 
-    let user = document.getElementById('txtNomeCadastro').value;
-    let emailUser = document.getElementById('txtEmailCadastro').value;
-    let pwd = document.getElementById('txtSenhaCadastro').value;
+    let user = document.getElementById('txtNomeCadastro').value.trim();
+    let emailUser = document.getElementById('txtEmailCadastro').value.trim();
+    let pwd = document.getElementById('txtSenhaCadastro').value.trim();
 
     tabela.push({
         usuario: user,
@@ -20,6 +20,7 @@ function cadastroFim(){
 
     //console.log(tabTeste[0].usuario);
     
+    document.getElementById('modalSnakeMensagemCadastro').style.display = 'block';
 
 }
 
