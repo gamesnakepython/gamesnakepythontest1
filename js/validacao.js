@@ -1,40 +1,36 @@
 let mensagem = "";
-let confLogin = 0;
-let confCadastro = 0;
-let spanLog = "";
-let spanCad = "";
-spanLog.childNodes = [];
-spanCad.childNodes = [];
+var confLogin = new Boolean(false);
+var confCadastro = new Boolean(false);
+spanLog = new Object();
+spanCad = new Object();
 let txtLog = "";
 let txtCad = "";
 
-function mensagemAlert(mensagem) {
+function mensagemAlertLogin(mensagem) {
 
-    if (confLogin > 0) {
+    if (confLogin == true) {
         spanLog.removeChild(spanLog.childNodes[0]);
-        confLogin--;
+        confLogin = false;
         validarLogin();
     } else {
         spanLog = document.getElementById("mensagemAlerta");
         txtLog = document.createTextNode(mensagem);
         spanLog.appendChild(txtLog);
-        confLogin++;
-        validarLogin();
+        confLogin = true;
     }
 }
 
 function mensagemAlertCadastro(mensagem) {
 
-    if (confCadastro > 0) {
+    if (confCadastro == true) {
         spanCad.removeChild(spanCad.childNodes[0]);
-        confCadastro--;
+        confCadastro =  false;
         validarCadastro();
     } else {
         spanCad = document.getElementById("mensagemAlerta");
         txtCad = document.createTextNode(mensagem);
         spanCad.appendChild(txtCad);
-        confCadastro++;
-        validarCadastro();
+        confCadastro = true;
     }
 }
 
@@ -45,15 +41,15 @@ function validarLogin() {
 
     if (nome == '') {
         document.getElementById('modalSnakeMensagem').style.display = 'block';
-        mensagemAlert("Usuário Incorreto!");
+        mensagemAlertLogin("Usuário Incorreto!");
         document.getElementById("txtNome").focus();
     } else if (senha == '') {
         document.getElementById('modalSnakeMensagem').style.display = 'block';
-        mensagemAlert("Senha Incorreto!");
+        mensagemAlertLogin("Senha Incorreto!");
         document.getElementById("txtSenha").focus();
     } else {
         document.getElementById('modalSnakeMensagem').style.display = 'block';
-        mensagemAlert("Login Realizado com Sucesso!");
+        mensagemAlertLogin("Login Realizado com Sucesso!");
     }
 }
 
@@ -89,7 +85,7 @@ function validarCadastro() {
         document.getElementById("txtConfSenhaCadastro").focus();
     } else {
         document.getElementById('modalSnakeMensagem').style.display = 'block';
-        mensagemAlertCadastro("Login Realizado com Sucesso!");
+        mensagemAlertCadastro("Cadastro Realizado com Sucesso!");
         document.getElementById('modalSnakeCadastro').style.display = 'none';
     }
 
