@@ -8,8 +8,9 @@ let txtCad = "";
 
 function mensagemAlertLogin(mensagem) {
 
-    if (confLogin == true) {
+    if ((confCadastro == true) || (confLogin == true)) {
         spanLog.removeChild(spanLog.childNodes[0]);
+        confCadastro = false;
         confLogin = false;
         validarLogin();
     } else {
@@ -22,9 +23,10 @@ function mensagemAlertLogin(mensagem) {
 
 function mensagemAlertCadastro(mensagem) {
 
-    if (confCadastro == true) {
+    if ((confCadastro == true) || (confLogin == true)) {
         spanCad.removeChild(spanCad.childNodes[0]);
         confCadastro =  false;
+        confLogin = false;
         validarCadastro();
     } else {
         spanCad = document.getElementById("mensagemAlerta");
