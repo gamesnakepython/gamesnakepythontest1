@@ -33,6 +33,7 @@
                 onmouseout="pararOlhos()">
         </div>
     </div>
+    <!-- LOGIN -->
     <div class="row">
         <div class="col-dg-12, col-dm-12">
             <div class="modal-container">
@@ -43,8 +44,10 @@
                 <div id="modalSnakeLogin" class="modal">
                     <div class="modal-animate-top displayLogin ">
                         <header>
-                            <span onclick="document.getElementById('modalSnakeLogin').style.display='none'"
-                                class="modal-button modal-display-topright">&times;</span>
+                            <span
+                                onclick="document.getElementById('modalSnakeLogin').style.display='none'; limparMensagemAlerta()"
+                                class="modal-button modal-display-topright">&times;
+                            </span>
                         </header>
                         <form>
                             <div class="row">
@@ -92,11 +95,12 @@
             </div>
         </div>
     </div>
+    <!-- CADASTRO -->
     <div id="modalSnakeCadastro" class="modal">
         <div class="modal-animate-top displayCadastro ">
             <header>
                 <span
-                    onclick="document.getElementById('modalSnakeCadastro').style.display='none'; document.getElementById('modalSnakeLogin').style.display='block'"
+                    onclick="document.getElementById('modalSnakeCadastro').style.display='none'; document.getElementById('modalSnakeLogin').style.display='block'; limparMensagemAlerta()"
                     class="modal-button modal-display-topright">&times;</span>
             </header>
             <form>
@@ -150,12 +154,13 @@
                     </div>
                     <div class="col-dg-6 col-dm-6">
                         <input type="button" value="Cadastrar" onfocus="playAudio('sonsButton')"
-                            onblur="pauseAudio('sonsButton')" onclick=" validarCadastro(); cadastroFim();">
+                            onblur="pauseAudio('sonsButton')" onclick=" validarCadastro()">
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <!-- POPUP-->
     <div id="modalSnakeMensagem" class="modal mensagem">
         <div class="modal-animate-top displayMensagem ">
             <header>

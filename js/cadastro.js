@@ -1,26 +1,31 @@
-let tabela = [];
+let cadastroJogadores = [];
+let cadastroJogadoresJson = [];
 
 function cadastroFim(){
 
-    let user = document.getElementById('txtNomeCadastro').value.trim();
+    let nameUser= document.getElementById('txtNomeCadastro').value.trim();
     let emailUser = document.getElementById('txtEmailCadastro').value.trim();
-    let pwd = document.getElementById('txtSenhaCadastro').value.trim();
+    let passwordUser = document.getElementById('txtSenhaCadastro').value.trim();
 
-    tabela.push({
-        usuario: user,
+    cadastroJogadores.push({
+        jogador: nameUser,
         email: emailUser,
-        senha: pwd
+        senha: passwordUser
     });
 
     //Converte a tabela que esta em JSON em string
-    localStorage.setItem("tabUsuarios", JSON.stringify(tabela))
+    localStorage.setItem("cadastroJogadoresJson", JSON.stringify(cadastroJogadores))
 
     //Converte a tabala que esta em string numa estrutura JSON
-    let tabTeste = JSON.parse(localStorage.getItem("tabUsuarios"));
-
-    //console.log(tabTeste[0].usuario);
+    cadastroJogadoresJson = JSON.parse(localStorage.getItem("cadastroJogadoresJson"));
     
     document.getElementById('modalSnakeMensagemCadastro').style.display = 'block';
 
 }
+
+function login() {
+    return JSON.parse(localStorage.getItem('cadastroJogadoresJson')).filter(cadastroJogadoresJson => cadastroJogadoresJson.jogador === jogador)
+}
+
+
 
