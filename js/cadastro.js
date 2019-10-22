@@ -14,10 +14,10 @@ function cadastroFim(){
     });
 
     //Converte a tabela que esta em JSON em string
-    localStorage.setItem("cadastroJogadoresJson", JSON.stringify(cadastroJogadores))
+    localStorage.setItem("cadastroJogadores", JSON.stringify(cadastroJogadores))
 
     //Converte a tabala que esta em string numa estrutura JSON
-    cadastroJogadoresJson = JSON.parse(localStorage.getItem("cadastroJogadoresJson"));
+    cadastroJogadoresJson = JSON.parse(localStorage.getItem("cadastroJogadores"));
     
     document.getElementById('modalSnakeMensagemCadastro').style.display = 'block';
 
