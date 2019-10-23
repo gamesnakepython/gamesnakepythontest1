@@ -1,3 +1,11 @@
+let mensagem = "";
+var confLogin = new Boolean(false);
+var confCadastro = new Boolean(false);
+spanLog = new Object();
+spanCad = new Object();
+let txtLog = "";
+let txtCad = "";
+
 function mensagemAlerta(mensagem) {
     document.getElementById("mensagemAlerta").innerHTML = mensagem;
 }
@@ -54,8 +62,8 @@ function validarCadastro() {
         document.getElementById("txtConfSenhaCadastro").focus();
     } else {
         document.getElementById('modalSnakeMensagem').style.display = 'block';
+        mensagemAlerta("Cadastro Realizado com Sucesso!");
         cadastroFim();
-        mensagemAlerta("Cadastro Realizado com Sucesso!");        
         document.getElementById('modalSnakeCadastro').style.display = 'none';        
     }
  
