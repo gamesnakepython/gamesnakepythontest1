@@ -23,8 +23,8 @@ function cadastroFim(){
 
 }
 
-function login() {
-    return JSON.parse(localStorage.getItem('cadastroJogadoresJson')).filter(cadastroJogadoresJson => cadastroJogadoresJson.jogador === jogador)
+function login(id) {
+    return JSON.parse(localStorage.getItem('cadastroJogadores')).filter(cadastroJogadores => cadastroJogadores.id === id)
 }
 
 
